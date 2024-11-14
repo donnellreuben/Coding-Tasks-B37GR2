@@ -10,12 +10,16 @@ public class OddOrEven {
 
      */
     public static void main(String[] args) {
-        int num = 6;
-        if (num % 2 == 0){
-            System.out.println("identify(" + num + ") -> Even");
-        }
-        else {
-            System.out.println("identify(" + num + ") -> Odd");
+        System.out.println(identify(5));
+        System.out.println(identify(4));
+
+    }
+
+    public static String identify(int num) {
+        if (num % 2 == 0) {
+            return ("Even");
+        } else {
+            return ("Odd");
         }
     }
 
