@@ -21,7 +21,7 @@ public class OddOrEven {
         String result = "";
         if (input % 2 == 0) {
             result = "Even";
-        } else if (input % 1 == 0) {
+        } else if (input % 2 == 1) {
             result = "Odd";
         }
         return result;
