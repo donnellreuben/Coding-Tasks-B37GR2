@@ -9,4 +9,19 @@ public class OddOrEven {
         identify(6) ->  "Even"
 
      */
+    public static void main(String[] args) {
+        System.out.println(identify(5));
+        System.out.println(identify(4));
+
+    }
+
+    public static String identify(int num) {
+        if (num % 2 == 0) {
+            return ("Even");
+        } else {
+            return ("Odd");
+        }
+    }
+
+
 }

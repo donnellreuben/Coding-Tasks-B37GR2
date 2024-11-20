@@ -1,8 +1,8 @@
-package donnellWeeklyTasks.Week01;
+package mahdiweeklytasks.week01;
 
 public class OddOrEven {
 
-        /*
+       /*
     Write a method which can identifies given number is even or odd
 
         EX:
@@ -10,11 +10,10 @@ public class OddOrEven {
         identify(6) ->  "Even"
 
      */
-
-    public static void main(String[] args) {
-        System.out.println(identify(5));
-        System.out.println(identify(6));
-    }
+       public static void main(String[] args) {
+           System.out.println(identify(5));
+           System.out.println(identify(6));
+       }
 
     public static String identify(int input) {
 
@@ -26,5 +25,4 @@ public class OddOrEven {
         }
         return result;
     }
-
 }
