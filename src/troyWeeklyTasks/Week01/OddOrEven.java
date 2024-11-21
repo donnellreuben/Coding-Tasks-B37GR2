@@ -9,7 +9,7 @@ public class OddOrEven {
         identify(5) ->  "Odd"
         identify(6) ->  "Even"
 
-        Mykolo is volunteer for this
+        Mykola is volunteer for this
 
      */
 
