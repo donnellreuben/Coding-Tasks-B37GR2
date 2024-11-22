@@ -11,6 +11,7 @@ public class FINRA {
 
     public static void main(String[] args) {
 
+
         for (int i = 1; i <=30 ; i++) {
 
             boolean by3 =i % 3 == 0;
