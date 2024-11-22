@@ -1,4 +1,4 @@
-package mahdiweeklytasks.week01;
+package mahdiWeeklyTasks.week01;
 
 public class OddOrEven {
 
