@@ -18,6 +18,9 @@ public class FinraTask {
             else if (i % 5 == 0){
                 System.out.println("RA");
             }
+            else {
+                System.out.println(i);
+            }
         }
     }
 }
