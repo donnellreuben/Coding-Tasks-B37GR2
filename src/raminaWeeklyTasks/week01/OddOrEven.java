@@ -1,4 +1,4 @@
-package raminaWeeklyTasks;
+package raminaWeeklyTasks.week01;
 
 public class OddOrEven {
     /*
