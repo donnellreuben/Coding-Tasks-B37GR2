@@ -19,12 +19,10 @@ public class Number_FINRA_DivisibleBy3_5 {
             } else if (i % 5 == 0) {
                 System.out.println("RA");
 
-            }else {
+            } else {
                 System.out.println(i);
             }
-
         }
-
     }
 
 
