@@ -1,4 +1,4 @@
-package SaraWeeklyTasks;
+package SaraWeeklyTasks.Week01;
 
 /*
     Write a method which can identifies given number is even or odd
