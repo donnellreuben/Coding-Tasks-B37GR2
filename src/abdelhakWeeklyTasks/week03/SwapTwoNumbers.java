@@ -3,14 +3,14 @@ package abdelhakWeeklyTasks.week03;
 public class SwapTwoNumbers {
     public static void main(String[] args) {
 
-            int num1 = 9;
-            int num2 = 4;
+            int a = 9;
+            int b = 4;
 
-            num1 = num1 + num2;
-            num2 = num1 - num2;
-            num1 = num1 - num2;
+            a = a + b;
+            b = a - b;
+            a = a - b;
 
-            System.out.println(" num1 = " + num1 + " \n num2 = " + num2);
+            System.out.println(" a = " + a + " \n num2 = " + b);
 
         }
     }
