@@ -1,5 +1,7 @@
 package troyWeeklyTasks.Week04;
 
+import javax.management.MBeanAttributeInfo;
+
 public class Number_ReverseNegative_W4 {
 
     /*
@@ -14,10 +16,17 @@ negative number and return it as int
 
       Halnur is volunteer
      */
+    public static void main(String[] args) {
 
+        int input = -456;
 
+        String inputString = Integer.toString(input);
 
-
-
+        StringBuilder reverse = new StringBuilder(inputString.substring(1));
+        System.out.print("-");
+         for (int i = reverse.length() - 1; i >= 0; i--) {
+        System.out.print(reverse.charAt(i));
+    }
+}
 
 }
