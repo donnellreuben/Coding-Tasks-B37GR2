@@ -45,6 +45,8 @@ public class SwapTwoNumbers {
         System.out.println("\n <---- After swap ---> \n\t\tA is " + a + "\n\t\tB is " + b);
 
 
+
+
          
     }
 
