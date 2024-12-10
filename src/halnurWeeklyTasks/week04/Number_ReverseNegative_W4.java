@@ -8,28 +8,26 @@ negative number and return it as int
     */
 public class Number_ReverseNegative_W4 {
 
+    public static int reverse(int input) {
+        String str = String.valueOf(input);    //  --->"-456"
+        int inputReversed = 0;
+
+        String strReverse = "-";
+
+
+            for (int i = str.length() - 1; i > 0; i--) {
+                strReverse += str.charAt(i);         //----->  "-654"
+            }
+
+        inputReversed = Integer.parseInt(strReverse);
+        return inputReversed;
+    }
+
     public static void main(String[] args) {
         int input=-456;
         System.out.println("output ="+reverse(input));
 
     }
-
-
-    public static int reverse(int input) {
-        String str = String.valueOf(input);
-        int inputReversed = 0;
-
-        String strReverse = "-"+"";
-        if (input < 0) {
-
-            for (int i = str.length() - 1; i > 0; i--) {
-                strReverse += str.charAt(i);
-            }
-        }
-        inputReversed = Integer.parseInt(strReverse);
-        return inputReversed;
-    };
-
 
 
 
