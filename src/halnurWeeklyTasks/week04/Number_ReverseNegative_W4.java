@@ -14,27 +14,28 @@ public class Number_ReverseNegative_W4 {
 
         String strReverse = "-";
 
-
+        if (input < 0) {
             for (int i = str.length() - 1; i > 0; i--) {
                 strReverse += str.charAt(i);         //----->  "-654"
             }
-
+        }else if (input>0) {
+            for (int i = str.length() - 1; i >= 0; i--) {
+                strReverse += str.charAt(i);
+            }
+        }else{
+            return 0;
+        }
         inputReversed = Integer.parseInt(strReverse);
         return inputReversed;
     }
 
+
+
+
     public static void main(String[] args) {
         int input=-456;
-        System.out.println("output ="+reverse(input));
-
+        System.out.println(reverse(input));
     }
 
-
-
-
-
-
-
-
-
 }
+
