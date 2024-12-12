@@ -1,18 +1,14 @@
 package Lejlas_Weekly_Task.week4;
 
 public class NumberReverseNegative {
-
-        /*
+            /*
     Write a return method that can reverse
 negative number and return it as int
 
       Ex:
       input => -456
       output => -654
-
-
-
-      Halnur is volunteered
+        Halnur is volunteered
      */
 
     public static void main(String[] args) {
@@ -29,8 +25,5 @@ negative number and return it as int
         }
     }
 }
-
-
-
 
 
