@@ -19,5 +19,16 @@ public class SwapTwoNumbers {
 
         System.out.println(" a = " + a + ", b = " + b);
 
+
+       /* if(a!=b){
+            System.out.println("a = " +b);
+            System.out.println("b = " + a);
+        }else{
+            System.out.println("a = " + a);
+            System.out.println("b = " + b);
+        }*/
+
     }
+
+
 }
