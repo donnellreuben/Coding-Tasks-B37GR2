@@ -7,12 +7,17 @@ public class RemoveDuplicates {
      */
      public static void main(String[] args) {
          String st = "AAbABBBbbCCCd";
+
+         System.out.println("st = " + st);
+
          System.out.println("removeDuplicate(st) = " + removeDuplicate(st));
      }
+
+
     public static String removeDuplicate (String st) {
         String s = "";
         for (int i = 0; i < st.length(); i++) {
-            if (!(s.contains(String.valueOf(st.charAt(i))))) {
+            if (!(s.contains("" + st.charAt(i)))) {
                 s += (st.charAt(i));
             }
         }
