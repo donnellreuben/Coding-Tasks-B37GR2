@@ -1,5 +1,7 @@
 package SaraWeeklyTasks.Week07;
 
+import java.util.Scanner;
+
 public class FindUniqueChars {
     /*
     Write a return method that can find the unique characters from the String
@@ -8,7 +10,12 @@ public class FindUniqueChars {
      */
 
     public static void main(String[] args) {
-        System.out.println("uniqueChar(\"AAAJBBBCCCDEF\") = " + uniqueChar("AZAAJBBBCCCDEF"));
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Please enter a string containing duplicate characters: ");
+        String str = scanner.nextLine();
+        System.out.println("uniqueChar = " + uniqueChar(str));
     }
 
     public static String uniqueChar(String st){
