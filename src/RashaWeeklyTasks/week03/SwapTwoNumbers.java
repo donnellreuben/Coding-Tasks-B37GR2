@@ -1,4 +1,4 @@
-package Rasha.week03;
+package RashaWeeklyTasks.week03;
 
 public class SwapTwoNumbers {
     /*     Swap two variable values without using a third variable
