@@ -12,15 +12,16 @@ public class FindUniqueChars {
     }
 
     public static String findUniqueCharacters(String str) {
-        StringBuilder result = new StringBuilder(); // --> used to construct the result string with non-duplicate characters
+        StringBuilder newString = new StringBuilder(); // --> used to construct the newString string with non-duplicate characters
 
         for (int i = 0; i < str.length(); i++) {
             char currentChar = str.charAt(i);
             if (str.indexOf(currentChar) == str.lastIndexOf(currentChar)) {
-                result.append(currentChar);
+                //      9                             9
+                newString.append(currentChar);
             }
         }
 
-        return result.toString();
+        return newString.toString();
     }
 }
