@@ -1,4 +1,4 @@
-package Rasha.week04;
+package RashaWeeklyTasks.week04;
 
 public class reverse_negative_number {
 

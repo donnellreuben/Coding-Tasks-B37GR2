@@ -1,4 +1,4 @@
-package Rasha.week01;
+package RashaWeeklyTasks.week01;
 
 public class OddEven {
    /* Write a method which can identifies given number is even or odd
