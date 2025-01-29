@@ -1,4 +1,4 @@
-package Rasha.week02;
+package RashaWeeklyTasks.week02;
 
 public class Finra {
     /*
