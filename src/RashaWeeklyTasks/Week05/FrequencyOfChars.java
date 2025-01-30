@@ -1,7 +1,4 @@
-package Rasha.Week05;
-
-import java.util.LinkedHashMap;
-import java.util.Map;
+package RashaWeeklyTasks.Week05;
 
 public class FrequencyOfChars {
 
