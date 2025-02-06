@@ -1,7 +1,6 @@
-package troyWeeklyTasks.Week09;
+package raminaWeeklyTasks.week09;
 
-public class PasswordValidation_W9 {
-
+public class PasswordValidation {
 
     /*
     Write a function that can verify if a password is valid or not. requirements:
@@ -14,38 +13,25 @@ public class PasswordValidation_W9 {
         if all requirements above are met, the method returns true, otherwise returns false
      */
 
-    // Sara is volunteer
+    public static void main(String[] args) {
+        System.out.println(isValidPassword("ABC123!"));
+        System.out.println(isValidPassword("Abc123!"));
+        System.out.println(isValidPassword("123!"));
+        System.out.println(isValidPassword("ABc!"));
 
-
-    public static boolean passwordIsValid(String password) {
-
-        boolean hasLowerCaseChar = password.matches("(.*[a-z].*)"),
-                hasUpperCaseChar = password.matches("(.*[A-Z].*)"),
-                hasDigits = password.matches("(.*[0-9].*)"),
-                hasSpecialChar = password.matches("(.*[ -/, :-@].*)");
-
-        if(password.length() >= 6 && !password.contains(" ")) {
-            if (hasLowerCaseChar && hasUpperCaseChar && hasDigits && hasSpecialChar) {
-                return true;
-            }
-        }
-
-        return false;
     }
-
-
-    public static boolean passwordIsValid2(String password){
-        boolean hasLowerCase =false,
-                hasUpperCase=false,
-                hasDigit=false,
-                hasSpecialCh = false;
+    public static boolean isValidPassword(String password){
+        boolean hasLower =false;
+        boolean hasUpper=false;
+        boolean hasDigit=false;
+        boolean hasSpecialCh = false;
 
         if(password.length() >= 6 && !password.contains(" ")){
             for (int i = 0; i < password.length(); i++) {
                 if(Character.isUpperCase(password.charAt(i))) {
-                    hasUpperCase = true;
+                    hasUpper = true;
                 }else if(Character.isLowerCase(password.charAt(i))){
-                    hasLowerCase = true;
+                    hasLower = true;
                 }else if(Character.isDigit(password.charAt(i))){
                     hasDigit = true;
                 }else if(!Character.isLetterOrDigit(password.charAt(i))) {
@@ -53,9 +39,6 @@ public class PasswordValidation_W9 {
                 }
             }
         }
-        return hasUpperCase && hasLowerCase && hasDigit && hasSpecialCh;
+        return hasUpper && hasLower && hasDigit && hasSpecialCh;
     }
-
-
-
 }
