@@ -1,5 +1,8 @@
 package troyWeeklyTasks.Week13;
 
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class SumUpToZero_W13 {
 
 
@@ -14,5 +17,55 @@ public class SumUpToZero_W13 {
      */
 
     // Sara is volunteer
+
+    public static int[] sumUpToZero(int n){
+
+        //Initial an empty arr
+        int[] sumUpToZero = new int[n];
+
+        //to store sum of numbers
+        int sum = 0;
+
+        for (int i = 0; i < n-1; i++) {
+
+            int ranNum = (int)(Math.random() * 10); //Math.random() generates a random double between 0.0 and 1.0
+            while ( contains(sumUpToZero, ranNum)){
+                ranNum = (int)(Math.random() * 10);
+            }
+            sumUpToZero[i] =  ranNum;
+            sum += sumUpToZero[i];
+
+        }
+
+        sumUpToZero[n-1] = -sum;
+
+        return sumUpToZero;
+
+    }
+
+    public static boolean contains ( int arr[], int n){
+        for (int i = 0; i < arr.length; i++) {
+            if( arr[i] == n) return true;
+        }
+        return false;
+    }
+
+
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter a number between 1 to 100: ");
+        int n = scanner.nextInt();
+
+        if( n <= 1 || n >= 100){
+            System.out.println("Invalid number!!");
+            System.exit(0);
+        }
+
+        int[] sumUpToZero = sumUpToZero(n);
+
+        System.out.println("An Array of " + n + " unique integer with SUM Up To Zero = " + Arrays.toString(sumUpToZero));
+    }
 
 }

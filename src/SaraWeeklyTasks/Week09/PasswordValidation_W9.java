@@ -19,13 +19,12 @@ public class PasswordValidation_W9 {
         }
 
         boolean hasUpper = false, hasLower = false, hasDigit = false, hasSpecial = false;
-        String specialCharacters = "!@#$%^&*(),.?\":{}|<>";
 
         for (char ch : password.toCharArray()) {
             if (Character.isUpperCase(ch)) hasUpper = true;
             else if (Character.isLowerCase(ch)) hasLower = true;
             else if (Character.isDigit(ch)) hasDigit = true;
-            else if (specialCharacters.contains(String.valueOf(ch))) hasSpecial = true;
+            else if (!Character.isLetterOrDigit(ch)) hasSpecial = true;
         }
 
         return hasUpper && hasLower && hasDigit && hasSpecial;
