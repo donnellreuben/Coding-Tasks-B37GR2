@@ -59,7 +59,7 @@ public class SumUpToZero {
             int n = scanner.nextInt();
 
             if( n <= 1 || n >= 100){
-                System.err.println("Invalid number!!");
+                System.out.println("Invalid number!!");
                 System.exit(0);
             }
 

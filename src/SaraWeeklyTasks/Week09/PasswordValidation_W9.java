@@ -1,5 +1,7 @@
 package SaraWeeklyTasks.Week09;
 
+import java.util.Scanner;
+
 public class PasswordValidation_W9 {
 
     /*
@@ -31,11 +33,15 @@ public class PasswordValidation_W9 {
     }
 
     public static void main(String[] args) {
-        System.out.println(isValidPassword("New@123"));  // true
-        System.out.println(isValidPassword("123Year"));   // false
-        System.out.println(isValidPassword("PASS123"));   // false
-        System.out.println(isValidPassword("Cydeo123"));   // false
-        System.out.println(isValidPassword("New@"));     // false
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println(" put your password: ");
+        String pass = scanner.nextLine();
+        System.out.println(isValidPassword(pass));
+
+//        System.out.println(isValidPassword("testPassword123!"));
+//        System.out.println(isValidPassword("mockPassword2024$"));
+//        System.out.println(isValidPassword("examplePWD456@"));
     }
 
 
