@@ -3,6 +3,9 @@ package troyWeeklyTasks.Week13;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class SumUpToZero_W13 {
 
 
@@ -18,54 +21,68 @@ public class SumUpToZero_W13 {
 
     // Sara is volunteer
 
-    public static int[] sumUpToZero(int n){
 
-        //Initial an empty arr
-        int[] sumUpToZero = new int[n];
+    //Solution 1
+    public static int[] sumUpToZero(int N) {
 
-        //to store sum of numbers
+        int[] result = new int[N];
         int sum = 0;
 
-        for (int i = 0; i < n-1; i++) {
-
-            int ranNum = (int)(Math.random() * 10); //Math.random() generates a random double between 0.0 and 1.0
-            while ( contains(sumUpToZero, ranNum)){
-                ranNum = (int)(Math.random() * 10);
-            }
-            sumUpToZero[i] =  ranNum;
-            sum += sumUpToZero[i];
-
+        for (int i = 0; i < N - 1; i++) {
+            result[i] = i;
+            sum += i;
         }
 
-        sumUpToZero[n-1] = -sum;
+        result[N - 1] = -sum;//0, 1, 2, 3, -6 = 0
 
-        return sumUpToZero;
-
+        return result;
     }
 
-    public static boolean contains ( int arr[], int n){
-        for (int i = 0; i < arr.length; i++) {
-            if( arr[i] == n) return true;
-        }
-        return false;
-    }
-
-
-
-    public static void main(String[] args) {
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println("Enter a number between 1 to 100: ");
-        int n = scanner.nextInt();
-
-        if( n <= 1 || n >= 100){
-            System.out.println("Invalid number!!");
+    //Solution 2
+    public static int[] sumUpToZero2(int N) {
+        if (N <= 1 || N >= 100) {
+            //throw new IllegalArgumentException("N must be between 2 and 99 inclusive.");
+            System.err.println("N must be between 2 and 99 inclusive.");// will print in red colour
             System.exit(0);
         }
 
-        int[] sumUpToZero = sumUpToZero(n);
+        Random random = new Random();
+        int[] result = new int[N];
+        int sum = 0;
 
-        System.out.println("An Array of " + n + " unique integer with SUM Up To Zero = " + Arrays.toString(sumUpToZero));
+        // Generate N-1 unique random integers
+        for (int i = 0; i < N - 1; i++) {
+            int randomNumber;
+            boolean isUnique;
+
+            // Keep generating random numbers until a unique one is found
+            do {
+                randomNumber = random.nextInt(); // Any random integer
+                isUnique = true;
+
+                // Check if the number is already in the array
+                for (int j = 0; j < i; j++) {
+                    if (result[j] == randomNumber) {
+                        isUnique = false;
+                        break;
+                    }
+                }
+            } while (!isUnique);
+
+            result[i] = randomNumber;
+            sum += randomNumber;
+        }
+
+        // Set the last element to the negative of the sum to ensure the total sum is 0
+        result[N - 1] = -sum;
+
+        return result;
+    }
+
+    public static void main(String[] args) {
+        int N = 111;
+        int[] result = sumUpToZero2(N);
+        System.out.println(Arrays.toString(result));
     }
 
 }
